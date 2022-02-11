@@ -48,7 +48,7 @@ pipeline {
         container('kustomize'){
           dir('deployment'){
             sh '''
-            kubectl apply -f ./deployment/configmap.yaml
+            kubectl apply -f ./configmap.yaml
             kustomize create --resources ./deployment.yaml
             echo "deploy new deployment"
             kustomize edit add label deploy:$tag -f
