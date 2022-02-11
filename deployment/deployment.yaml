@@ -24,7 +24,7 @@ spec:
         - name: log-volume
           mountPath: /log          
         ports:
-        - containerPort: 81
+        - containerPort: 80
       volumes:
         - name: config-volume
           configMap:
